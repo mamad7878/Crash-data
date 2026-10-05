@@ -1,0 +1,132 @@
+================================================================================
+FINAL 15-ROUND TEST V2
+================================================================================
+Rows: 5867
+IDs: 9665957 -> 9671823
+Window: 15
+Threshold: 2.0x
+Low-rate rule: <= 45.0%
+Wait: 1
+Future rounds: 3
+Permutation iterations: 10000
+
+DATA SPLITS
+--------------------------------------------------------------------------------
+Train      : 3520
+Validation : 1173
+Test       : 1174
+
+CORRECT THREE-ROUND BASELINES
+--------------------------------------------------------------------------------
+>=1.20x | single=82.990% | independent-3=99.508% | empirical-3=99.233% | blocks=1955
+>=1.50x | single=66.150% | independent-3=96.121% | empirical-3=96.061% | blocks=1955
+>=1.70x | single=58.446% | independent-3=92.824% | empirical-3=92.072% | blocks=1955
+>=2.00x | single=49.872% | independent-3=87.404% | empirical-3=86.752% | blocks=1955
+>=2.50x | single=39.935% | independent-3=78.330% | empirical-3=77.903% | blocks=1955
+>=3.00x | single=33.254% | independent-3=70.264% | empirical-3=70.077% | blocks=1955
+
+NON-OVERLAPPING RULE RESULTS
+--------------------------------------------------------------------------------
+TRAIN
+Signals: 326
+  >=1.20x | N=  326 | hit= 98.773% | baseline= 99.519% | delta= -0.746pp | CI95=[97.578,99.968]
+  >=1.50x | N=  326 | hit= 95.092% | baseline= 96.146% | delta= -1.054pp | CI95=[92.747,97.437]
+  >=1.70x | N=  326 | hit= 91.718% | baseline= 92.732% | delta= -1.014pp | CI95=[88.726,94.710]
+  >=2.00x | N=  326 | hit= 86.810% | baseline= 87.479% | delta= -0.669pp | CI95=[83.137,90.483]
+  >=2.50x | N=  326 | hit= 78.834% | baseline= 78.308% | delta= +0.527pp | CI95=[74.400,83.269]
+  >=3.00x | N=  326 | hit= 71.166% | baseline= 70.054% | delta= +1.112pp | CI95=[66.248,76.083]
+
+VALIDATION
+Signals: 100
+  >=1.20x | N=  100 | hit= 99.000% | baseline= 99.519% | delta= -0.519pp | CI95=[97.050,100.000]
+  >=1.50x | N=  100 | hit= 93.000% | baseline= 96.239% | delta= -3.239pp | CI95=[87.999,98.001]
+  >=1.70x | N=  100 | hit= 92.000% | baseline= 93.402% | delta= -1.402pp | CI95=[86.683,97.317]
+  >=2.00x | N=  100 | hit= 90.000% | baseline= 88.465% | delta= +1.535pp | CI95=[84.120,95.880]
+  >=2.50x | N=  100 | hit= 80.000% | baseline= 79.998% | delta= +0.002pp | CI95=[72.160,87.840]
+  >=3.00x | N=  100 | hit= 75.000% | baseline= 72.586% | delta= +2.414pp | CI95=[66.513,83.487]
+
+TEST
+Signals: 128
+  >=1.20x | N=  128 | hit=100.000% | baseline= 99.460% | delta= +0.540pp | CI95=[100.000,100.000]
+  >=1.50x | N=  128 | hit= 99.219% | baseline= 95.925% | delta= +3.294pp | CI95=[97.693,100.000]
+  >=1.70x | N=  128 | hit= 96.094% | baseline= 92.504% | delta= +3.589pp | CI95=[92.737,99.450]
+  >=2.00x | N=  128 | hit= 91.406% | baseline= 86.041% | delta= +5.365pp | CI95=[86.551,96.262]
+  >=2.50x | N=  128 | hit= 85.156% | baseline= 76.643% | delta= +8.513pp | CI95=[78.997,91.316]
+  >=3.00x | N=  128 | hit= 77.344% | baseline= 68.476% | delta= +8.867pp | CI95=[70.092,84.596]
+
+ALL
+Signals: 554
+  >=1.20x | N=  554 | hit= 99.097% | baseline= 99.508% | delta= -0.410pp | CI95=[98.310,99.885]
+  >=1.50x | N=  554 | hit= 95.668% | baseline= 96.121% | delta= -0.453pp | CI95=[93.973,97.363]
+  >=1.70x | N=  554 | hit= 92.780% | baseline= 92.824% | delta= -0.045pp | CI95=[90.625,94.935]
+  >=2.00x | N=  554 | hit= 88.448% | baseline= 87.404% | delta= +1.044pp | CI95=[85.786,91.109]
+  >=2.50x | N=  554 | hit= 80.505% | baseline= 78.330% | delta= +2.175pp | CI95=[77.207,83.804]
+  >=3.00x | N=  554 | hit= 73.285% | baseline= 70.264% | delta= +3.021pp | CI95=[69.601,76.970]
+
+FOCUSED 2X TEST
+--------------------------------------------------------------------------------
+TRAIN        | N=  326 | hit= 86.810% | baseline= 87.479% | delta= -0.669pp | CI95=[83.137,90.483]
+VALIDATION   | N=  100 | hit= 90.000% | baseline= 88.465% | delta= +1.535pp | CI95=[84.120,95.880]
+TEST         | N=  128 | hit= 91.406% | baseline= 86.041% | delta= +5.365pp | CI95=[86.551,96.262]
+ALL          | N=  554 | hit= 88.448% | baseline= 87.404% | delta= +1.044pp | CI95=[85.786,91.109]
+
+PERMUTATION TEST
+--------------------------------------------------------------------------------
+Target: >=2x
+Iterations: 10000
+Signal locations FIXED
+Only multiplier ordering is randomized
+
+Observed hit rate: 88.448%
+Permutation p-value: 0.235576
+Permutations >= observed: 2355
+
+2X GENERALIZATION
+--------------------------------------------------------------------------------
+TRAIN        hit=86.810% baseline=87.479% delta=-0.669pp
+VALIDATION   hit=90.000% baseline=88.465% delta=+1.535pp
+TEST         hit=91.406% baseline=86.041% delta=+5.365pp
+
+AUTOCORRELATION
+--------------------------------------------------------------------------------
+lag  1: -0.015076
+lag  2: +0.009991
+lag  3: -0.009008
+lag  4: -0.024369
+lag  5: -0.014598
+lag  6: +0.006599
+lag  7: +0.011001
+lag  8: -0.015149
+lag  9: -0.002710
+lag 10: -0.022965
+
+MARKOV 2-STATE MODEL
+--------------------------------------------------------------------------------
+L=<2x
+H=>=2x
+
+L->L : 50.119%
+L->H : 49.881%
+H->L : 50.120%
+H->H : 49.880%
+
+COUNTS
+L->L = 1474
+L->H = 1467
+H->L = 1466
+H->H = 1459
+
+================================================================================
+FINAL CLASSIFICATION
+================================================================================
+YELLOW / WEAK PATTERN
+
+FINAL DECISION RULE
+--------------------------------------------------------------------------------
+GREEN = Test + Validation beat the correct 3-round baseline AND permutation p<0.05.
+YELLOW = Test beats the correct baseline but evidence is insufficient.
+RED = Test does not beat the correct baseline.
+
+This is statistical backtesting only.
+It does NOT establish predictability of future Crash outcomes.
+================================================================================
