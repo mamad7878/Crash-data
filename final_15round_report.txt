@@ -1,0 +1,165 @@
+================================================================================
+FINAL CRASH DATASET ANALYSIS
+================================================================================
+Rows: 5867
+IDs: 9665957 -> 9671823
+
+BASELINE
+--------------------------------------------------------------------------------
+>=1.20x : 82.990%
+>=1.50x : 66.150%
+>=1.70x : 58.446%
+>=2.00x : 49.872%
+>=2.50x : 39.935%
+>=3.00x : 33.254%
+
+15-ROUND RULE
+--------------------------------------------------------------------------------
+Rule:
+Previous 15 rounds have >=2x rate <=45%
+Then wait 1 round
+Then evaluate next 3 rounds
+Success = at least one of those 3 reaches target
+
+SIGNAL COUNTS
+All / overlapping       : 1754
+All / non-overlapping   : 554
+
+OVERLAPPING RESULTS
+--------------------------------------------------------------------------------
+TRAIN
+  >= 1.20x | N= 1039 | hit= 99.038% | baseline= 82.990% | delta=+16.048pp
+  >= 1.50x | N= 1039 | hit= 96.535% | baseline= 66.150% | delta=+30.385pp
+  >= 1.70x | N= 1039 | hit= 93.070% | baseline= 58.446% | delta=+34.625pp
+  >= 2.00x | N= 1039 | hit= 88.450% | baseline= 49.872% | delta=+38.578pp
+  >= 2.50x | N= 1039 | hit= 79.500% | baseline= 39.935% | delta=+39.564pp
+  >= 3.00x | N= 1039 | hit= 71.607% | baseline= 33.254% | delta=+38.354pp
+
+VALIDATION
+  >= 1.20x | N=  301 | hit= 99.003% | baseline= 82.990% | delta=+16.014pp
+  >= 1.50x | N=  301 | hit= 95.017% | baseline= 66.150% | delta=+28.867pp
+  >= 1.70x | N=  301 | hit= 94.020% | baseline= 58.446% | delta=+35.574pp
+  >= 2.00x | N=  301 | hit= 91.030% | baseline= 49.872% | delta=+41.158pp
+  >= 2.50x | N=  301 | hit= 80.731% | baseline= 39.935% | delta=+40.796pp
+  >= 3.00x | N=  301 | hit= 73.090% | baseline= 33.254% | delta=+39.836pp
+
+TEST
+  >= 1.20x | N=  414 | hit= 99.758% | baseline= 82.990% | delta=+16.769pp
+  >= 1.50x | N=  414 | hit= 98.068% | baseline= 66.150% | delta=+31.918pp
+  >= 1.70x | N=  414 | hit= 96.135% | baseline= 58.446% | delta=+37.690pp
+  >= 2.00x | N=  414 | hit= 90.580% | baseline= 49.872% | delta=+40.708pp
+  >= 2.50x | N=  414 | hit= 81.643% | baseline= 39.935% | delta=+41.707pp
+  >= 3.00x | N=  414 | hit= 73.188% | baseline= 33.254% | delta=+39.935pp
+
+ALL
+  >= 1.20x | N= 1754 | hit= 99.202% | baseline= 82.990% | delta=+16.212pp
+  >= 1.50x | N= 1754 | hit= 96.636% | baseline= 66.150% | delta=+30.487pp
+  >= 1.70x | N= 1754 | hit= 93.957% | baseline= 58.446% | delta=+35.511pp
+  >= 2.00x | N= 1754 | hit= 89.396% | baseline= 49.872% | delta=+39.524pp
+  >= 2.50x | N= 1754 | hit= 80.217% | baseline= 39.935% | delta=+40.281pp
+  >= 3.00x | N= 1754 | hit= 72.235% | baseline= 33.254% | delta=+38.981pp
+
+NON-OVERLAPPING RESULTS
+--------------------------------------------------------------------------------
+TRAIN
+  >= 1.20x | N=  326 | hit= 98.773% | baseline= 82.990% | delta=+15.783pp
+  >= 1.50x | N=  326 | hit= 95.092% | baseline= 66.150% | delta=+28.942pp
+  >= 1.70x | N=  326 | hit= 91.718% | baseline= 58.446% | delta=+33.272pp
+  >= 2.00x | N=  326 | hit= 86.810% | baseline= 49.872% | delta=+36.938pp
+  >= 2.50x | N=  326 | hit= 78.834% | baseline= 39.935% | delta=+38.899pp
+  >= 3.00x | N=  326 | hit= 71.166% | baseline= 33.254% | delta=+37.912pp
+
+VALIDATION
+  >= 1.20x | N=  100 | hit= 99.000% | baseline= 82.990% | delta=+16.010pp
+  >= 1.50x | N=  100 | hit= 93.000% | baseline= 66.150% | delta=+26.850pp
+  >= 1.70x | N=  100 | hit= 92.000% | baseline= 58.446% | delta=+33.554pp
+  >= 2.00x | N=  100 | hit= 90.000% | baseline= 49.872% | delta=+40.128pp
+  >= 2.50x | N=  100 | hit= 80.000% | baseline= 39.935% | delta=+40.065pp
+  >= 3.00x | N=  100 | hit= 75.000% | baseline= 33.254% | delta=+41.746pp
+
+TEST
+  >= 1.20x | N=  128 | hit=100.000% | baseline= 82.990% | delta=+17.010pp
+  >= 1.50x | N=  128 | hit= 99.219% | baseline= 66.150% | delta=+33.069pp
+  >= 1.70x | N=  128 | hit= 96.094% | baseline= 58.446% | delta=+37.648pp
+  >= 2.00x | N=  128 | hit= 91.406% | baseline= 49.872% | delta=+41.534pp
+  >= 2.50x | N=  128 | hit= 85.156% | baseline= 39.935% | delta=+45.221pp
+  >= 3.00x | N=  128 | hit= 77.344% | baseline= 33.254% | delta=+44.090pp
+
+ALL
+  >= 1.20x | N=  554 | hit= 99.097% | baseline= 82.990% | delta=+16.108pp
+  >= 1.50x | N=  554 | hit= 95.668% | baseline= 66.150% | delta=+29.518pp
+  >= 1.70x | N=  554 | hit= 92.780% | baseline= 58.446% | delta=+34.334pp
+  >= 2.00x | N=  554 | hit= 88.448% | baseline= 49.872% | delta=+38.575pp
+  >= 2.50x | N=  554 | hit= 80.505% | baseline= 39.935% | delta=+40.570pp
+  >= 3.00x | N=  554 | hit= 73.285% | baseline= 33.254% | delta=+40.031pp
+
+FOCUSED 2X TEST
+--------------------------------------------------------------------------------
+TRAIN        N=  326 2x-hit= 86.810% baseline= 49.872% delta=+36.938pp
+VALIDATION   N=  100 2x-hit= 90.000% baseline= 49.872% delta=+40.128pp
+TEST         N=  128 2x-hit= 91.406% baseline= 49.872% delta=+41.534pp
+ALL          N=  554 2x-hit= 88.448% baseline= 49.872% delta=+38.575pp
+
+PERMUTATION TEST
+--------------------------------------------------------------------------------
+5000 random permutations
+Target: >=2x
+
+Permutation p-value: 0.148770
+
+AUTOCORRELATION OF log(multiplier)
+--------------------------------------------------------------------------------
+lag  1: -0.015076
+lag  2: +0.009991
+lag  3: -0.009008
+lag  4: -0.024369
+lag  5: -0.014598
+lag  6: +0.006599
+lag  7: +0.011001
+lag  8: -0.015149
+lag  9: -0.002710
+lag 10: -0.022965
+
+MARKOV TRANSITION MATRIX
+--------------------------------------------------------------------------------
+States: L=<2x, H=>=2x
+L -> L : 50.119%
+L -> H : 49.881%
+H -> L : 50.120%
+H -> H : 49.880%
+
+Raw transition counts:
+L->L 1474
+L->H 1467
+H->L 1466
+H->H 1459
+
+LOW STREAK ANALYSIS
+--------------------------------------------------------------------------------
+Probability of >=2x immediately after exactly/at least k low rounds
+
+k= 1 | N= 2941 | next >=2x= 49.881% | baseline= 49.872% | delta= +0.009pp
+k= 2 | N= 1474 | next >=2x= 50.475% | baseline= 49.872% | delta= +0.603pp
+k= 3 | N=  730 | next >=2x= 52.055% | baseline= 49.872% | delta= +2.183pp
+k= 4 | N=  350 | next >=2x= 52.000% | baseline= 49.872% | delta= +2.128pp
+k= 5 | N=  168 | next >=2x= 55.357% | baseline= 49.872% | delta= +5.485pp
+k= 6 | N=   75 | next >=2x= 53.333% | baseline= 49.872% | delta= +3.461pp
+k= 7 | N=   35 | next >=2x= 65.714% | baseline= 49.872% | delta=+15.842pp
+k= 8 | N=   12 | next >=2x= 75.000% | baseline= 49.872% | delta=+25.128pp
+k= 9 | N=    3 | next >=2x=100.000% | baseline= 49.872% | delta=+50.128pp
+
+================================================================================
+FINAL CLASSIFICATION
+================================================================================
+
+YELLOW / WEAK PATTERN
+
+Decision logic:
+GREEN requires independent Test improvement + permutation significance.
+YELLOW requires Test improvement without sufficient statistical evidence.
+RED means the Test does not beat baseline.
+
+IMPORTANT:
+This analysis is statistical/backtesting only.
+It does not establish that future Crash outcomes are predictable.
+================================================================================
